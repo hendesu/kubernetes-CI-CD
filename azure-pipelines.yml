@@ -12,6 +12,9 @@ pool:
   
 
 steps:
+- task: BatchScript@1
+  inputs:
+    filename: 'C:\Users\hende\Desktop\script-staging.sh'
 
 
 - task: NodeTool@0

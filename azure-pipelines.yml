@@ -21,7 +21,7 @@ steps:
   displayName: 'Install Node.js'
 
     
-- script: /home/azure/script.sh
+- script: 
      C:\Users\hende\Desktop\script-staging.bat
   displayName: 'create .env file'
   

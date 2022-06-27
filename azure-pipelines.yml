@@ -20,7 +20,12 @@ steps:
     versionSpec: '14.x'
   displayName: 'Install Node.js'
 
-
+    
+- script: /home/azure/script.sh
+     
+     chmod +x C:\Users\hende\Desktop\script-staging.sh
+     C:\Users\hende\Desktop\script-staging.sh
+  displayName: 'create .env file'
 - script: |
     npm install
     npm run build

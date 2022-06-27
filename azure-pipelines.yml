@@ -13,12 +13,7 @@ pool:
 
 steps:
 
-- task: CmdLine@2
-  inputs:
-    script: |
-      echo Write your commands here
-      
-      echo Hello world
+
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
@@ -29,6 +24,10 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build'
+
+- script: 
+    nohup npm run dev
+  displayName: 'put npm run dev in the background'
 
   
 - task: PublishPipelineArtifact@1

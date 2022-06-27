@@ -22,7 +22,7 @@ steps:
 
     
 - script: 
-     C:\Users\hende\Desktop\script-staging.bat
+     /home/kali/Desktop/script1.sh
   displayName: 'create .env file'
   
 - script: |

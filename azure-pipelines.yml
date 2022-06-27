@@ -32,7 +32,7 @@ steps:
  
 - task: CmdLine@2
   inputs:
-    script: 'nohup npm run dev'
+    script: 'nohup npm run dev &'
   displayName: 'put npm run dev in the background'
 
   

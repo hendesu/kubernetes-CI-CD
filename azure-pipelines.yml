@@ -31,10 +31,6 @@ steps:
   displayName: 'npm install and build'
 
  
-- task: CmdLine@2
-  inputs:
-    script: 'nohup npm run dev &'
-  displayName: 'put npm run dev in the background'
 
   
 - task: PublishPipelineArtifact@1

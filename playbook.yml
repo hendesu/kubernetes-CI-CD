@@ -1,0 +1,79 @@
+
+---
+
+ - hosts: localhost
+   become: true
+   tasks:
+      - name: include vars from another file
+        include_vars:
+          file: var.yml
+      - name: Git checkout
+        git:
+           repo: 'https://github.com/hendesu/bootcamp-app.git'
+           dest: "{{ path }}"
+           update: no
+
+
+      - name: Install the version '14.19.0' of package "node.js"
+        shell: 'curl -sL https://deb.nodesource.com/setup_14.x -o /tmp/nodesource_setup.sh && sudo bash /tmp/nodesource_setup.sh && sudo apt install nodejs'
+
+
+      - name: Install packages based on package.json using the npm
+        npm:
+          path: "{{ path }}"
+
+      - name: Creating an empty file
+        file:
+          path: "{{ env_path }}"
+          state: touch
+
+      - name: creating env file
+        copy:
+          dest: "{{ env_path }}"
+          content: |
+            
+            ###Host_configuration
+
+            PORT=8080 
+            HOST=0.0.0.0 
+            NODE_ENV=development 
+            HOST_URL={{ host_url }} 
+            COOKIE_ENCRYPT_PWD=superAwesomePasswordStringThatIsAtLeast32CharactersLong!
+
+            ###Okta_configuration
+
+            OKTA_ORG_URL={{ OKTA_ORG_URL }} 
+            OKTA_CLIENT_ID={{ OKTA_CLIENT_ID }} 
+            OKTA_CLIENT_SECRET={{ OKTA_CLIENT_SECRET }}
+
+            ###Postgres_configuration
+
+            PGHOST={{ PGHOST }} 
+            PGUSERNAME={{ PGUSERNAME }} 
+            PGDATABASE=postgres
+            PGPASSWORD={{ PGPASSWORD }} 
+            PGPORT=5432
+
+
+      - name: run database
+        shell: 'cd {{ path }} && npm run initdb '
+
+
+      - cron:
+          name: "a job for reboot"
+          special_time: reboot
+          job: "sh -c 'cd {{ path }}  && npm run dev'"
+
+      - name: reboot the machines
+        reboot:
+
+
+
+
+
+
+
+
+
+
+

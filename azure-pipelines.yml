@@ -66,8 +66,8 @@ stages:
               kubernetesServiceConnection: 'cluster'
               namespace: 'default'
               manifests: |
-                /home/kali/Desktop/agent2/app/3/s/staging/deploy.yml
-                /home/kali/Desktop/agent2/app/3/s/staging/settings.yml
-                /home/kali/Desktop/agent2/app/3/s/staging/nginx.yml
+                /home/kali/Desktop/agent2/app/3/s/staging/deployment.yml
+                /home/kali/Desktop/agent2/app/3/s/staging/service.yml
+                /home/kali/Desktop/agent2/app/3/s/staging/ingress.yml
               containers: '$registry/test_registry'
               imagePullSecrets: '$(imagePullSecret)'

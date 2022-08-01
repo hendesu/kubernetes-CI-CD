@@ -66,8 +66,8 @@ stages:
               kubernetesServiceConnection: 'staging-staging-default-1659385825357'
               namespace: 'default'
               manifests: |
-                $(Pipeline.Workspace)/manifests/deploy.yml
-                $(Pipeline.Workspace)/manifests/settings.yml
-                $(Pipeline.Workspace)/manifests/nginx.yml
+                $(Pipeline.Workspace)/staging/deploy.yml
+                $(Pipeline.Workspace)/staging/settings.yml
+                $(Pipeline.Workspace)/staging/nginx.yml
               containers: '$(containerRegistry)/$(imageRepository):$(tag)'
               imagePullSecrets: '$(imagePullSecret)'

@@ -9,40 +9,31 @@ trigger:
 - master
 - feature/*
 
+resources:
+- repo: self
+
+
+
 pool:
-  project
-  
-
-steps:
-
-
-
-- task: NodeTool@0
-  inputs:
-    versionSpec: '14.x'
-  displayName: 'Install Node.js'
-
+  pool
     
-- script: 
-     /home/kali/Desktop/script1.sh
-  displayName: 'create .env file'
-  
-- script: |
-    npm install
-  displayName: 'npm install and build'
 
- 
+stages:
+- stage: Build
+  displayName: Build and push stage
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      pool
+    steps:
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'registry'
+        repository: 'test_registry'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
 
   
-- task: PublishPipelineArtifact@1
-  inputs:
-    targetPath: '$(Pipeline.Workspace)'
-    artifact: 'build.id'
-    publishLocation: 'pipeline'
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(Build.BinariesDirectory)'
-    includeRootFolder: true
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    replaceExistingArchive: true
+
+

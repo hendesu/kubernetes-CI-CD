@@ -46,7 +46,7 @@ stages:
     - group: staging-env
     pool:
       pool
- 
+    environment: 'staging'
     strategy:
       runOnce:
         deploy:

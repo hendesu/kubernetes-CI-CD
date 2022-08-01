@@ -46,7 +46,7 @@ stages:
     - group: staging-env
     pool:
       pool
-    environment: 'k8s-2061.default'
+ 
     strategy:
       runOnce:
         deploy:

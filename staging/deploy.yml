@@ -2,19 +2,19 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: webappbootcamp 
+  name: weight-tracker 
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: webappbootcamp
+      app: weight-tracker
   template:
     metadata:
       labels:
-        app: webappbootcamp 
+        app: weight-tracker
     spec:
       containers:
-        - name: webappbootcamp
+        - name: weight-tracker
           imagePullPolicy: "Always" 
           image: dockerregistry15.azurecr.io/test_registry
           ports:

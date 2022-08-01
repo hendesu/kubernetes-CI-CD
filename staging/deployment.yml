@@ -2,16 +2,16 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: weight-tracker 
+  name: test_registry 
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: weight-tracker
+      app: test_registry
   template:
     metadata:
       labels:
-        app: weight-tracker
+        app: test_registry
     spec:
       containers:
         - name: weight-tracker

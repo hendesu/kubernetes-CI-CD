@@ -15,6 +15,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: weight-tracker
+            name: testregistry
             port:
               number: 8080

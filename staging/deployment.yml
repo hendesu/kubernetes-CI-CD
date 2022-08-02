@@ -1,5 +1,5 @@
 
-apiVersion : apiregistration.k8s.io/v1
+apiVersion : apps/v4
 kind: Deployment
 metadata:
   name: testregistry 

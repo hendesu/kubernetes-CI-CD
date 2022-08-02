@@ -2,23 +2,32 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: testregistry 
+  name: testregistry
+  labels:
+    app: testregistry 
 spec:
   replicas: 3
+  minReadySeconds: 15
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 2
   selector:
     matchLabels:
       app: testregistry
   template:
     metadata:
       labels:
-        app: testregistry
+        app: testregistry 
     spec:
       containers:
-        - name: testregistry
-          imagePullPolicy: "Always" 
-          image: dockerregistry15.azurecr.io/testregistry
-          ports:
-          - containerPort: 8080
+        - name: testregistry 
+          image: dockerregistry15.azurecr.io/testregistry:latest
+          # ports:
+          # - containerPort: 80
           envFrom:
           - secretRef:
              name: secret
+
+---

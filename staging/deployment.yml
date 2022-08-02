@@ -1,5 +1,5 @@
 
-apiVersion : apps/v4
+apiVersion : apps/v1
 kind: Deployment
 metadata:
   name: testregistry 
@@ -14,7 +14,7 @@ spec:
         app: testregistry
     spec:
       containers:
-        - name: weight-tracker
+        - name: testregistry
           imagePullPolicy: "Always" 
           image: dockerregistry15.azurecr.io/testregistry
           ports:

@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: testregistry 
-          image: dockerregistry15.azurecr.io/testregistry:latest
+          image: dockerregistry15.azurecr.io/testregistry
           # ports:
           # - containerPort: 80
           envFrom:

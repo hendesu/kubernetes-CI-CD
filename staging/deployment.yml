@@ -7,7 +7,7 @@ metadata:
     app: testregistry 
 spec:
   replicas: 3
-  minReadySeconds: 15
+  minReadySeconds: 60
   strategy:
     type: RollingUpdate
     rollingUpdate:

@@ -22,7 +22,8 @@ spec:
         app: testregistry 
     spec:
       containers:
-        - name: testregistry 
+        - name: testregistry
+          imagePullPolicy: "Always" 
           image: dockerregistry15.azurecr.io/testregistry:235
           ports:
           - containerPort: 80

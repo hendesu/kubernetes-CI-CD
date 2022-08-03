@@ -1,11 +1,10 @@
 FROM node:14-alpine
 
+WORKDIR /bootcamp
+
 RUN npm install
 
 COPY . /bootcamp
-
-
-WORKDIR /bootcamp
 
 
 EXPOSE 8080

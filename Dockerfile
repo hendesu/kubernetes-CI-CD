@@ -1,13 +1,11 @@
+# Base image
 FROM node:14-alpine
 
-WORKDIR /bootcamp
-
-RUN npm install
-
-COPY . /bootcamp
-
-
+COPY . /bootcamp-app
+WORKDIR /bootcamp-app
 EXPOSE 8080
 
-#CMD ["npm", "run", "initdb"]
+# Install dependencies
+RUN npm install 
+CMD ["npm", "run", "initdb"]
 CMD ["npm", "run", "dev"]

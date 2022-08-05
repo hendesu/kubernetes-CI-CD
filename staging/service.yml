@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-    name: testregistry
+    name: weighttrackerkubernetes
 spec:
     type: ClusterIP
     ports:
@@ -9,4 +9,4 @@ spec:
        port: 80
        targetPort: 80
     selector:
-        app: testregistry
+        app: weighttrackerkubernetes

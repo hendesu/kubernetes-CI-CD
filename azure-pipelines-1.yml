@@ -93,7 +93,7 @@ stages:
 - stage: production
   displayName: Deploy prod
   condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/master'))
-  dependsOn: Build
+  dependsOn: Deploy
 
   jobs:
   - deployment: production

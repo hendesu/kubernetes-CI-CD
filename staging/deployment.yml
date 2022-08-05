@@ -1,19 +1,19 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: testregistry 
+  name: weighttrackerkubernetes 
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: testregistry 
+      app: weighttrackerkubernetes 
   template:
     metadata:
       labels:
-        app: testregistry  
+        app: weighttrackerkubernetes  
     spec:
       containers:
-        - name: testregistry 
+        - name: weighttrackerkubernetes 
           imagePullPolicy: "Always" 
           image: dockerregistry15.azurecr.io/weighttrackerkubernetes
           ports:

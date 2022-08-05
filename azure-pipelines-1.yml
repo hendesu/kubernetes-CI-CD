@@ -111,7 +111,7 @@ stages:
             displayName: Create imagePullSecret
             inputs:
               action: createSecret
-              kubernetesServiceConnection: 'staging-default'
+              kubernetesServiceConnection: 'kbsproduction'
               namespace: 'default'
               secretType: 'generic'
               secretName: $(imagePullSecret)
@@ -121,7 +121,7 @@ stages:
             displayName: Deploy to Kubernetes cluster
             inputs:
               action: deploy
-              kubernetesServiceConnection: 'staging-default'
+              kubernetesServiceConnection: 'kbsproduction'
               namespace: 'default'
               manifests: |
                 /home/kali/Desktop/agent2/app/4/s/staging/deployment.yml

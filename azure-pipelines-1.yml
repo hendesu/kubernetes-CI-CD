@@ -65,7 +65,7 @@ stages:
             displayName: Create imagePullSecret
             inputs:
               action: createSecret
-              kubernetesServiceConnection: 'staging-default'
+              kubernetesServiceConnection: 'stagcluster'
               namespace: 'default'
               secretType: 'generic'
               secretName: $(imagePullSecret)
@@ -75,7 +75,7 @@ stages:
             displayName: Deploy to Kubernetes cluster
             inputs:
               action: deploy
-              kubernetesServiceConnection: 'staging-default'
+              kubernetesServiceConnection: 'stagcluster'
               namespace: 'default'
               manifests: |
                 /home/kali/Desktop/agent2/app/4/s/staging/deployment.yml
@@ -111,7 +111,7 @@ stages:
             displayName: Create imagePullSecret
             inputs:
               action: createSecret
-              kubernetesServiceConnection: 'stagcluster'
+              kubernetesServiceConnection: 'staging-default'
               namespace: 'default'
               secretType: 'generic'
               secretName: $(imagePullSecret)
@@ -121,7 +121,7 @@ stages:
             displayName: Deploy to Kubernetes cluster
             inputs:
               action: deploy
-              kubernetesServiceConnection: 'stagcluster'
+              kubernetesServiceConnection: 'staging-default'
               namespace: 'default'
               manifests: |
                 /home/kali/Desktop/agent2/app/4/s/staging/deployment.yml

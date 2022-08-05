@@ -74,6 +74,7 @@ stages:
             displayName: Deploy to Kubernetes cluster
             inputs:
               action: deploy
+              kubernetesServiceConnection: 'staging-default'
               manifests: |
                 $(Pipeline.Workspace)/staging/deployment.yml
                 $(Pipeline.Workspace)/staging/service.yml

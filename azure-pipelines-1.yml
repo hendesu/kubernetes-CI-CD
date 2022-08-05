@@ -66,6 +66,7 @@ stages:
             displayName: Create imagePullSecret
             inputs:
               action: createSecret
+              kubernetesServiceConnection: 'staging-default'
               secretName: $(imagePullSecret)
               dockerRegistryEndpoint: $(dockerRegistryServiceConnection)
 

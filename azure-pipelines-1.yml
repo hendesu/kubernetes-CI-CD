@@ -76,9 +76,9 @@ stages:
               action: deploy
               kubernetesServiceConnection: 'staging-default'
               manifests: |
-                $(Pipeline.Workspace)/staging/deployment.yml
-                $(Pipeline.Workspace)/staging/service.yml
-                $(Pipeline.Workspace)/staging/ingress.yml
+                /home/kali/Desktop/agent2/app/3/s/staging/deployment.yml
+                /home/kali/Desktop/agent2/app/3/s/staging/service.yml
+                /home/kali/Desktop/agent2/app/3/s/staging/ingress.yml
               imagePullSecrets: |
                 $(imagePullSecret)
               containers: |

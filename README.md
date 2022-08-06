@@ -1,5 +1,5 @@
 ## CI-CD Kubernetes pipline.
-https://www.a10networks.com/wp-content/uploads/OnDemandWebinar-Kubernetes-KeyGraphic-@2x-768x422.png
+![Demo](https://www.a10networks.com/wp-content/uploads/OnDemandWebinar-Kubernetes-KeyGraphic-@2x-768x422.png)
 
 
 ### Requirements
@@ -31,15 +31,15 @@ https://www.a10networks.com/wp-content/uploads/OnDemandWebinar-Kubernetes-KeyGra
 
 ## the pipline:
 
-https://bootcamp.rhinops.io/images/k8s-cicd.png
+![Demo](https://bootcamp.rhinops.io/images/k8s-cicd.png)
 
 
 
 ## results:
 
-C:\Users\hende\Desktop\staging.PNG
+![Demo](C:\Users\hende\Desktop\staging.PNG)
 
-C:\Users\hende\Desktop\production.PNG
+![Demo](C:\Users\hende\Desktop\production.PNG)
 
 
 

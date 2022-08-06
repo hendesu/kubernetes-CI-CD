@@ -37,13 +37,9 @@
 
 ## results:
 
-![Screenshot](C:\Users\hende\Desktop\staging.PNG)
+![Screenshot](\src\staging.PNG)
 
-![Screenshot](C:\Users\hende\Desktop\production.PNG)
-
-
-
-
+![Screenshot](\src\production.PNG)
 
 
 

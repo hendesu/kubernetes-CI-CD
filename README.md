@@ -37,9 +37,9 @@
 
 ## results:
 
-![plot](C:\Users\hende\Desktop\staging.PNG)
+![Screenshot](C:\Users\hende\Desktop\staging.PNG)
 
-![plot](C:\Users\hende\Desktop\production.PNG)
+![Screenshot](C:\Users\hende\Desktop\production.PNG)
 
 
 

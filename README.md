@@ -1,3 +1,53 @@
+## CI-CD Kubernetes pipline.
+https://www.a10networks.com/wp-content/uploads/OnDemandWebinar-Kubernetes-KeyGraphic-@2x-768x422.png
+
+
+### Requirements
+
+* nodejs 14.x
+* docker on your machine. how to install - https://docs.docker.com/engine/install/ubuntu/
+* free okta account.
+* account in azure devops
+* account in azure cloud (you will need to purchase a subscription)
+* helm on your machine. install using chocolatey.
+* nginx on your clusters.
+
+### step by step:
+
+* create pipline in azure devops
+* create two kubernetes cluster's in two different resource groups in azure cloud.
+* create a virtual machine and install docker & helm & kubectl on it, and create an agent.
+* create container registry on azure cloud to store you'r images.
+* install nginx on your clusters using azure cli. use this command on the zure cli - kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.2.1/deploy/static/provider/cloud/deploy.yaml
+* configure your ci cd pipline.
+* configure you'r database using helm. how to configure - https://artifacthub.io/packages/helm/bitnami/postgresql
+> Deploy the NodeWeightTracker application on AKS meeting the following requirements:
+>>
+> The NodeWeightTracker application must be accessible from the internet
+> The NodeWeightTracker application must be exposed to the internet on port 80
+> The NodeWeightTracker must have at least 3 instances to ensure high availability
+> Use configmaps/secrets to store your application configurations
+> You must expose your application using the ingress controller
+
+## the pipline:
+
+https://bootcamp.rhinops.io/images/k8s-cicd.png
+
+
+
+## results:
+
+C:\Users\hende\Desktop\staging.PNG
+
+C:\Users\hende\Desktop\production.PNG
+
+
+
+
+
+
+
+
 # Node.js Weight Tracker
 
 ![Demo](docs/build-weight-tracker-app-demo.gif)

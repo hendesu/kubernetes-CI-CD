@@ -37,9 +37,9 @@
 
 ## results:
 
-![Screenshot](\src\staging.PNG)
+![Screenshot](https://github.com/hendesu/kubernetes-CI-CD/blob/master/kubernetes-CI-CD/src/staging.PNG)
 
-![Screenshot](\src\production.PNG)
+![Screenshot](https://github.com/hendesu/kubernetes-CI-CD/blob/master/kubernetes-CI-CD/src/production.PNG)
 
 
 

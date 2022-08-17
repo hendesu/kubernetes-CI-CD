@@ -1,0 +1,23 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: weighttrackerkubernetes 
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: weighttrackerkubernetes 
+  template:
+    metadata:
+      labels:
+        app: weighttrackerkubernetes  
+    spec:
+      containers:
+        - name: weighttrackerkubernetes 
+          imagePullPolicy: "Always" 
+          image: dockerregistry15.azurecr.io/weighttrackerkubernetes
+          ports:
+          - containerPort: 80
+          envFrom:
+          - secretRef:
+             name: dockerregistry1585df-auth
